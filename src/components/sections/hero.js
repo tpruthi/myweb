@@ -3,7 +3,8 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
 import { navDelay, loaderDelay } from '@utils';
 import { usePrefersReducedMotion } from '@hooks';
-// import { email } from '@config';
+import Typewriter from 'typewriter-effect';
+import { email } from '@config';
 
 const StyledHeroSection = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
@@ -59,13 +60,24 @@ const Hero = () => {
   }, []);
 
   const one = <h1>Hi, my name is</h1>;
-  const two = <h2 className="big-heading">Brittany Chiang.</h2>;
-  const three = <h3 className="big-heading">I build things for the web.</h3>;
-  const four = (
+  const two = <h2 className="big-heading">Tanishq Pruthi</h2>;
+  const three = (
+    <h3 className="big-heading" id="typingId">
+      <Typewriter
+        onInit={typewriter => {
+          typewriter
+            .typeString('I build things for the web.')
+
+            .start();
+        }}
+      />
+    </h3>
+  );
+  /* const four = (
     <>
       <p>
-        I’m a software engineer specializing in building (and occasionally designing) exceptional
-        digital experiences. Currently, I’m focused on building accessible, human-centered products
+        I’m a software engineer, specializes in building exceptional
+        digital experience. Currently, I’m focused on building accessible, human-centered products
         at{' '}
         <a href="https://upstatement.com/" target="_blank" rel="noreferrer">
           Upstatement
@@ -73,18 +85,14 @@ const Hero = () => {
         .
       </p>
     </>
-  );
+  ); */
   const five = (
-    <a
-      className="email-link"
-      href="https://www.newline.co/courses/build-a-spotify-connected-app"
-      target="_blank"
-      rel="noreferrer">
-      Check out my course!
+    <a className="email-link" href={`mailto:${email}`}>
+      Contact Me
     </a>
   );
 
-  const items = [one, two, three, four, five];
+  const items = [one, two, three, five];
 
   return (
     <StyledHeroSection>
