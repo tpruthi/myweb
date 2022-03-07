@@ -7,8 +7,8 @@ range: 'Jan 2017 - April 2021'
 url: 'https://www.fiserv.com/'
 ---
 
-- Migrated tapestry based old web application to latest plateform using Springboot and Angluarjs
+- Migrated tapestry based old web application to latest platform using Springboot and Angluarjs
 - Improved the performance and overall speed of the application by 5 folds using latest frameworks and clean code practice.
 - Improved the sales of the product by improving the overall user experience on new UI.
-- Architectured and implemented the countinous integration using jenkins which helped in improving the overall efficiency of the team.
-- Improved the security of application by removing the vulnerabilities and using OWASP guidlines.
+- Architecture and implemented the countinous integration using jenkins which helped in improving the overall efficiency of the team.
+- Improved the security of application by removing the vulnerabilities and using OWASP guidelines.
